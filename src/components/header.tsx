@@ -1,16 +1,32 @@
-"use client";
-
 import { Menu } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Cherry_Bloosm_Logo from "../assets/images/cherry_blossom_logo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="text-white">
+    <header
+      className={`transition-all duration-300 ${scrolled ? "fixed top-0 left-0 w-full bg-pink-300 shadow-lg z-10" : ""} text-white`}
+    >
       <div className="container mx-auto flex items-center justify-between p-4 md:px-8 lg:px-12">
         {/* Logo and Title */}
         <div className="flex items-center space-x-3">
@@ -118,7 +134,7 @@ const Header = () => {
               </motion.a>
               <motion.a
                 href="#contact"
-                whileHover={{ scale: 1.1}}
+                whileHover={{ scale: 1.1 }}
                 className="hover:text-pink-100"
               >
                 Contact
