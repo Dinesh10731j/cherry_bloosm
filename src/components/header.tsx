@@ -10,7 +10,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="text-gray-200">
+    <header className="text-white">
       <div className="container mx-auto flex items-center justify-between p-4 md:px-8 lg:px-12">
         {/* Logo and Title */}
         <div className="flex items-center space-x-3">
@@ -25,13 +25,13 @@ const Header = () => {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg font-bold font-[cursive] sm:text-xl md:text-2xl lg:text-3xl"
+            className="text-lg font-bold font-[cursive] sm:text-xl md:text-2xl lg:text-3xl -z-"
           >
             Cherry Blossom Cafe
           </motion.h1>
         </div>
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex md:space-x-6">
+        <nav className="hidden md:flex md:space-x-6 font-[cursive] font-bold">
           <motion.a
             href="#home"
             whileHover={{ scale: 1.1 }}
@@ -74,7 +74,7 @@ const Header = () => {
           onClick={() => setIsOpen(!isOpen)}
           className="p-2 md:hidden"
         >
-          <Menu className="w-6 h-6" />
+          <Menu className="w-6 h-6 cursor-pointer" />
         </motion.button>
       </div>
       {/* Mobile Navigation */}
