@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Cherry_Bloosm_Logo from "../assets/images/cherry_blossom_logo.png";
+import Link from "next/link";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,41 +49,37 @@ const Header = () => {
         </div>
         {/* Desktop Navigation */}
         <nav className="hidden md:flex md:space-x-6 font-[cursive] font-bold">
-          <motion.a
-            href="#home"
-            whileHover={{ scale: 1.1 }}
-            className="hover:text-pink-300"
+          <Link
+            href="/"
+           
+            className="hover:text-pink-500"
           >
             Home
-          </motion.a>
-          <motion.a
-            href="#menu"
-            whileHover={{ scale: 1.1 }}
-            className="hover:text-pink-300"
+          </Link>
+          <Link
+            href="/menu"
+            className="hover:text-pink-500"
           >
             Menu
-          </motion.a>
-          <motion.a
-            href="#specials"
-            whileHover={{ scale: 1.1 }}
-            className="hover:text-pink-300"
+          </Link>
+          <Link
+            href="/special"
+            className="hover:text-pink-500"
           >
             Specials
-          </motion.a>
-          <motion.a
-            href="#about"
-            whileHover={{ scale: 1.1 }}
-            className="hover:text-pink-300"
+          </Link>
+          <Link
+            href="/about"
+            className="hover:text-pink-500"
           >
             About
-          </motion.a>
-          <motion.a
-            href="#contact"
-            whileHover={{ scale: 1.1 }}
-            className="hover:text-pink-300"
+          </Link>
+          <Link
+            href="/contact"
+            className="hover:text-pink-500"
           >
             Contact
-          </motion.a>
+          </Link>
         </nav>
         {/* Mobile Menu Toggle Button */}
         <motion.button
@@ -104,41 +101,36 @@ const Header = () => {
             className="md:hidden bg-pink-300 z-20"
           >
             <div className="container mx-auto flex flex-col space-y-4 p-4">
-              <motion.a
-                href="#home"
-                whileHover={{ scale: 1.1 }}
-                className="hover:text-pink-100"
+              <Link
+                href="/"
+                className="hover:text-pink-500"
               >
                 Home
-              </motion.a>
-              <motion.a
-                href="#menu"
-                whileHover={{ scale: 1.1 }}
-                className="hover:text-pink-100"
+              </Link>
+              <Link
+                href="/menu"
+                className="hover:text-pink-500"
               >
                 Menu
-              </motion.a>
-              <motion.a
-                href="#specials"
-                whileHover={{ scale: 1.1 }}
-                className="hover:text-pink-100"
+              </Link>
+              <Link
+                href="/specials"
+                className="hover:text-pink-500"
               >
                 Specials
-              </motion.a>
-              <motion.a
-                href="#about"
-                whileHover={{ scale: 1.1 }}
-                className="hover:text-pink-100"
+              </Link>
+              <Link
+                href="/about"
+                className="hover:text-pink-500"
               >
                 About
-              </motion.a>
-              <motion.a
-                href="#contact"
-                whileHover={{ scale: 1.1 }}
-                className="hover:text-pink-100"
+              </Link>
+              <Link
+                href="/contact"
+                className="hover:text-pink-500"
               >
                 Contact
-              </motion.a>
+              </Link>
             </div>
           </motion.nav>
         )}
