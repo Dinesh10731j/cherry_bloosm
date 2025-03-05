@@ -4,7 +4,8 @@ import groupImage from "../assets/images/group.jpg";
 import baristaImage from "../assets/images/barista.jpg";
 import coupleImage from "../assets/images/couple.jpg";
 import coffeeHouseImage from "../assets/images/coffee.jpg";
-import { Coffee, Utensils, Wifi, Music,UserCircle} from "lucide-react";
+import { Coffee, Utensils, Wifi, Music,UserCircle,Cake} from "lucide-react";
+import MenuImage  from "@/assets/images/burger.jpg" 
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -78,6 +79,40 @@ export const customerReview = [
     image: UserCircle,
     review: "If you're looking for a cozy cafe with exceptional service and delicious coffee, this is the place!",
   },
-  // Add more reviews as needed
+
 ];
 
+
+
+export const menuItems = [
+  {
+    id: 1,
+    category: "Beverages",
+    icon:Coffee,
+    items: [
+      { name: "Cherry Blossom Latte", price: "NPR 250", image: MenuImage },
+      { name: "Iced Sakura Tea", price: "NPR 200", image: MenuImage },
+      { name: "Matcha Blossom Smoothie", price: "NPR 300", image:MenuImage},
+    ],
+  },
+  {
+    id: 2,
+    category: "Desserts",
+    icon:Cake,
+    items: [
+      { name: "Sakura Cheesecake", price: "NPR 350", image: MenuImage },
+      { name: "Cherry Macarons", price: "NPR 280", image: MenuImage },
+      { name: "Blossom Cupcake", price: "NPR 220", image: MenuImage},
+    ],
+  },
+  {
+    id: 3,
+    category: "Main Courses",
+    icon:Utensils, 
+    items: [
+      { name: "Teriyaki Chicken Rice Bowl", price: "NPR 500", image: MenuImage},
+      { name: "Blossom Sushi Roll", price: "NPR 600", image: MenuImage},
+      { name: "Cherry Blossom Ramen", price: "NPR 550", image: MenuImage },
+    ],
+  },
+];
