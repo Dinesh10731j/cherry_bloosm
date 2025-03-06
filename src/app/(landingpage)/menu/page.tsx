@@ -28,8 +28,8 @@ const Menu = () => {
                     height={200}
                     className="w-full h-40 object-cover rounded-md"
                   />
-                  <h4 className="text-lg font-bold text-pink-600 mt-2">{item.name}</h4>
-                  <p className="text-white font-semibold">{item.price}</p>
+                  <h4 className="text-lg font-bold text-pink-600 mt-2 font-[cursive]">{item.name}</h4>
+                  <p className="text-white font-semibold font-[cursive]">{item.price}</p>
                 </div>
               ))}
             </div>
