@@ -4,7 +4,7 @@ import groupImage from "../assets/images/group.jpg";
 import baristaImage from "../assets/images/barista.jpg";
 import coupleImage from "../assets/images/couple.jpg";
 import coffeeHouseImage from "../assets/images/coffee.jpg";
-import { Coffee, Utensils, Wifi, Music,UserCircle,Cake} from "lucide-react";
+import { Coffee, Utensils, Wifi, Music,UserCircle, Sparkles, Cake, IceCream, Cookie, Wine } from "lucide-react";
 import MenuImage  from "@/assets/images/burger.jpg" 
 
 export function cn(...inputs: ClassValue[]) {
@@ -116,3 +116,52 @@ export const menuItems = [
     ],
   },
 ];
+
+
+
+
+export const specials = [
+  {
+    id: 1,
+    name: "Blossom Latte",
+    description: "A creamy latte infused with cherry blossom essence.",
+    price: "NPR 350",
+    icon: Coffee 
+  },
+  {
+    id: 2,
+    name: "Sakura Delight Cake",
+    description: "A fluffy cake with a hint of cherry and vanilla.",
+    price: "NPR 450",
+    icon :Cake 
+  },
+  {
+    id: 3,
+    name: "Blossom Sparkle Tea",
+    description: "A refreshing iced tea with floral cherry notes.",
+    price: "NPR 300",
+    icon:Sparkles 
+  },
+  {
+    id: 4,
+    name: "Cherry Blossom Ice Cream",
+    description: "A delightful cherry-flavored ice cream with a creamy texture.",
+    price: "NPR 400",
+    icon: IceCream 
+  },
+  {
+    id: 5,
+    name: "Butter Blossom Cookies",
+    description: "Crunchy cookies infused with cherry blossom essence.",
+    price: "NPR 250",
+    icon: Cookie 
+  },
+  {
+    id: 6,
+    name: "Sakura Red Wine",
+    description: "A rich red wine with a subtle cherry blossom aroma.",
+    price: "NPR 800",
+    icon :Wine 
+  },
+];
+
