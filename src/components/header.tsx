@@ -63,7 +63,7 @@ const Header = () => {
             Menu
           </Link>
           <Link
-            href="/special"
+            href="/specials"
             className="hover:text-pink-500"
           >
             Specials
