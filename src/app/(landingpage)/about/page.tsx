@@ -11,7 +11,7 @@ const About = () => {
 
   return (
     <>
-      <div className="bg-pink-300 min-h-screen flex flex-col px-12">
+      <div className="bg-pink-300 min-h-screen flex flex-col px-2">
         <Header />
         <motion.div className="flex flex-col items-center justify-center flex-1 py-12 mt-20"
         initial={{ opacity: 0, y: 50 }} 
