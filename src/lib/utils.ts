@@ -11,6 +11,8 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+//Offers
+
 export const offers = [
   { id: 1, icon: Coffee, title: "Premium Coffee", desc: "Enjoy our freshly brewed coffee made from the finest beans." },
   { id: 2, icon: Utensils, title: "Delicious Food", desc: "A variety of delicious meals, snacks, and desserts." },
@@ -19,7 +21,7 @@ export const offers = [
 ];
 
 
-
+//Carousel Settings
 
 export const carouselSetting = {
   dots: true,
@@ -63,6 +65,8 @@ export const sliderImages = [{
 ]
 
 
+//Customer Reviews
+
 export const customerReview = [
   {
     name: "John Doe",
@@ -82,7 +86,7 @@ export const customerReview = [
 
 ];
 
-
+//Menu Items
 
 export const menuItems = [
   {
@@ -118,7 +122,7 @@ export const menuItems = [
 ];
 
 
-
+//Specials
 
 export const specials = [
   {
@@ -166,9 +170,36 @@ export const specials = [
 ];
 
 
+
+//Form Inputa
 export interface FormInputs {
   name: string;
   email: string;
   message: string;
 }
 
+
+
+//sidebar menus
+
+export const menus = {
+  admin: [
+    { name: "Dashboard", path: "/admin/dashboard" },
+    { name: "Users", path: "/admin/users" },
+    { name: "Settings", path: "/admin/settings" },
+  ],
+  staff: [
+    { name: "Dashboard", path: "/staff/dashboard" },
+    { name: "Orders", path: "/staff/orders" },
+  ],
+  customer: [
+    { name: "Home", path: "/" },
+    { name: "Orders", path: "/customer/orders" },
+    { name: "Profile", path: "/customer/profile" },
+  ],
+};
+
+
+export interface SidebarProps {
+  role: "admin" | "staff" | "customer";
+}
