@@ -182,7 +182,8 @@ export interface FormInputs {
 
 //sidebar menus
 
-export const menus = {
+export const menus: Record<string, { name: string; path: string }[]> = {
+
   admin: [
     { name: "Dashboard", path: "/admin/dashboard" },
     { name: "Users", path: "/admin/users" },
@@ -203,3 +204,10 @@ export const menus = {
 export interface SidebarProps {
   role: "admin" | "staff" | "customer";
 }
+
+
+//Layout Props
+  export interface LayoutProps {
+    children: React.ReactNode;
+    role: "admin" | "staff" | "customer";
+  }
